@@ -35,22 +35,22 @@ PERSONA PROFILE:
 PRODUCT MESSAGING: "${concept}"
 
 CRITICAL INSTRUCTIONS:
-- Generate ONE sentence only, in Japanese
+- Generate ONE sentence only, in English
 - Make the reaction HIGHLY SPECIFIC to this persona's values and concerns
-- Use age-appropriate, natural spoken language
+- Use age-appropriate, natural spoken language with casual contractions
 - DO NOT use generic phrases - dig deep into their specific motivations
 - Show their unique perspective, skepticism, excitement, or indifference
 - No quotation marks - just the raw reaction
 
 EXAMPLES OF DIFFERENTIATED REACTIONS:
-・Hardcore gym bro (28) → タンパク質何グラム？1食あたりのコスパ教えて
-・Wellness-focused professional (32) → 人工甘味料使ってないよね？成分表見せて
-・Complete beginner (35) → プロテインって筋肉モリモリになっちゃわない...？
-・Fitness influencer (25) → パッケージ映えするならストーリーに上げるかも
-・Health-conscious senior (62) → 製薬会社製なら安心できそうだけど、値段は？
-・Budget student (17) → バイト代で買える値段なら友達と試してみたいな
-・New mom (30) → 授乳中でも大丈夫な成分？子供の手の届かない場所に置けるサイズ？
-・Aspiring bodybuilder (21) → BCAAとHMBの配合比は？海外製と比べてどう？
+・Hardcore gym bro (28) → How many grams of protein per serving? What's the price per serving?
+・Wellness-focused professional (32) → Wait, does this have artificial sweeteners? Show me the ingredient list.
+・Complete beginner (35) → Will I get too bulky if I drink this? I just want to tone up...
+・Fitness influencer (25) → If the packaging looks good on camera, I might feature it in my stories.
+・Health-conscious senior (62) → Pharmaceutical company? That's reassuring, but what's the price?
+・Budget student (17) → If it's cheap enough for my allowance, I'd try it with my friends.
+・New mom (30) → Is this safe while breastfeeding? Is the container small enough to keep away from kids?
+・Aspiring bodybuilder (21) → What's the BCAA to HMB ratio? How does it compare to imported brands?
 
 Now generate the reaction for this specific persona:`;
 
