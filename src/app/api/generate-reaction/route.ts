@@ -25,24 +25,34 @@ export async function POST(request: NextRequest) {
       apiKey: apiKey,
     });
 
-    const prompt = `あなたは、ジムで新しいプロテイン製品を見かけた人物です。以下のペルソナになりきって、製品に対する第一印象を一言で答えてください。
+    const prompt = `You are roleplaying as a specific person who just encountered a new protein product at the gym. Generate their AUTHENTIC first reaction based on their unique personality, values, and concerns.
 
-ペルソナ:
-- ${persona.name}（${persona.age}歳）
-- ${persona.traits}
+PERSONA PROFILE:
+- Name: ${persona.name}
+- Age: ${persona.age}
+- Background & Values: ${persona.traits}
 
-製品: "${concept}"
+PRODUCT MESSAGING: "${concept}"
 
-指示:
-- 必ず1文のみ、日本語で答える
-- ペルソナの特徴・価値観を反映させる
-- 年齢に応じた自然な話し言葉を使う
-- 引用符は不要、反応のみ書く
+CRITICAL INSTRUCTIONS:
+- Generate ONE sentence only, in Japanese
+- Make the reaction HIGHLY SPECIFIC to this persona's values and concerns
+- Use age-appropriate, natural spoken language
+- DO NOT use generic phrases - dig deep into their specific motivations
+- Show their unique perspective, skepticism, excitement, or indifference
+- No quotation marks - just the raw reaction
 
-例:
-・ハードコア筋トレマン → タンパク質含有量とコスパはどうなの？
-・美容志向OL → パッケージ可愛いならインスタに載せたいかも
-・初心者 → プロテインって初めてだけど、飲みやすいのかな？`;
+EXAMPLES OF DIFFERENTIATED REACTIONS:
+・Hardcore gym bro (28) → タンパク質何グラム？1食あたりのコスパ教えて
+・Wellness-focused professional (32) → 人工甘味料使ってないよね？成分表見せて
+・Complete beginner (35) → プロテインって筋肉モリモリになっちゃわない...？
+・Fitness influencer (25) → パッケージ映えするならストーリーに上げるかも
+・Health-conscious senior (62) → 製薬会社製なら安心できそうだけど、値段は？
+・Budget student (17) → バイト代で買える値段なら友達と試してみたいな
+・New mom (30) → 授乳中でも大丈夫な成分？子供の手の届かない場所に置けるサイズ？
+・Aspiring bodybuilder (21) → BCAAとHMBの配合比は？海外製と比べてどう？
+
+Now generate the reaction for this specific persona:`;
 
     const message = await anthropic.messages.create({
       model: "claude-3-haiku-20240307",
