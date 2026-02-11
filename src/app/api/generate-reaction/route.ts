@@ -34,15 +34,17 @@ PERSONA PROFILE:
 
 PRODUCT MESSAGING: "${concept}"
 
-CRITICAL INSTRUCTIONS:
-- Generate ONE sentence only, in English
+ABSOLUTE REQUIREMENTS:
+- YOU MUST respond ONLY in English - NO Thai, Japanese, Vietnamese, or any other language
+- Even though the persona may be from Thailand or another country, they are responding in English for this international market research
+- Generate ONE sentence only
 - Make the reaction HIGHLY SPECIFIC to this persona's values and concerns
 - Use age-appropriate, natural spoken language with casual contractions
 - DO NOT use generic phrases - dig deep into their specific motivations
 - Show their unique perspective, skepticism, excitement, or indifference
 - No quotation marks - just the raw reaction
 
-EXAMPLES OF DIFFERENTIATED REACTIONS:
+EXAMPLES OF ENGLISH-ONLY REACTIONS (these personas are from various countries but ALL respond in English):
 ・Hardcore gym bro (28) → How many grams of protein per serving? What's the price per serving?
 ・Wellness-focused professional (32) → Wait, does this have artificial sweeteners? Show me the ingredient list.
 ・Complete beginner (35) → Will I get too bulky if I drink this? I just want to tone up...
@@ -52,11 +54,14 @@ EXAMPLES OF DIFFERENTIATED REACTIONS:
 ・New mom (30) → Is this safe while breastfeeding? Is the container small enough to keep away from kids?
 ・Aspiring bodybuilder (21) → What's the BCAA to HMB ratio? How does it compare to imported brands?
 
-Now generate the reaction for this specific persona:`;
+CRITICAL: Your response must be 100% in English. Do not include any Thai, Japanese, or other language words or phrases.
+
+Now generate the ENGLISH reaction for this specific persona:`;
 
     const message = await anthropic.messages.create({
       model: "claude-3-haiku-20240307",
       max_tokens: 200,
+      system: "You are an assistant that ALWAYS responds in English only, regardless of the persona's nationality or background. Never use Thai, Japanese, Vietnamese, or any other non-English language.",
       messages: [
         {
           role: "user",
